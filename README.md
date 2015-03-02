@@ -1,4 +1,4 @@
-    constantify
+    mkconstants
     ===========
 
     If you're building up a nested object of constants, for use with things like
@@ -8,7 +8,7 @@
 
     So, for instance:
 
-        constantify('ProductsApp', {
+        mkconstants('ProductsApp', {
           ActionTypes: {
             Product: {
               RECEIVE_RAW_INSTANCE: null
