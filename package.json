@@ -1,0 +1,29 @@
+{
+  "name": "constantify",
+  "version": "0.0.1",
+  "description": "A utility function for recursively building an object of constants.",
+  "main": "constantify.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node node_modules/browserify/bin/cmd.js -t babelify src/constantify.js -s constantify > constantify.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/radiosilence/constantify"
+  },
+  "keywords": [
+    "constants",
+    "flux"
+  ],
+  "author": "James Cleveland",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/radiosilence/constantify/issues"
+  },
+  "homepage": "https://github.com/radiosilence/constantify",
+  "devDependencies": {
+    "babel-core": "^4.6.5",
+    "babelify": "^5.0.3",
+    "browserify": "^9.0.3"
+  }
+}
