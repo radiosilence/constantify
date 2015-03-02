@@ -1,6 +1,6 @@
 {
   "name": "mkconstants",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A utility function for recursively building an object of constants.",
   "main": "mkconstants.js",
   "scripts": {
