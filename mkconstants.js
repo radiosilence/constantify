@@ -4,7 +4,7 @@
 var mkconstants = function (app, obj, prevK) {
   for (var k in obj) {
     var nextK = "" + (prevK ? prevK : app) + "." + k;
-    if (obj[k] === null) obj[k] = nextK;else mkconstants(app, obj[k], nextK);
+    if (obj[k] === null) obj[k] = nextK;else if (typeof obj[k] === "object") mkconstants(app, obj[k], nextK);
   }
   return obj;
 };
