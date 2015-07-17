@@ -1,11 +1,12 @@
 {
   "name": "mkconstants",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A utility function for recursively building an object of constants.",
   "main": "mkconstants.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node node_modules/browserify/bin/cmd.js -t babelify src/mkconstants.js -s mkconstants > mkconstants.js"
+    "build": "babel --modules umd -o mkconstants.js --loose all src/mkconstants.js",
+    "update-authors": "git log --format='%aN <%aE>' | sort -u | grep -v noreply > AUTHORS",
+    "prepublish": "npm run build; npm run update-authors"
   },
   "repository": {
     "type": "git",
@@ -22,8 +23,9 @@
   },
   "homepage": "https://github.com/radiosilence/mkconstants",
   "devDependencies": {
-    "babel-core": "^4.6.5",
-    "babelify": "^5.0.3",
-    "browserify": "^9.0.3"
+    "babel": "^5.6.14",
+    "babel-eslint": "^3.1.23",
+    "eslint": "^0.24.0",
+    "eslint-plugin-react": "^2.6.4"
   }
 }
